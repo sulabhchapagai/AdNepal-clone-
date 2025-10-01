@@ -383,8 +383,56 @@
     display: block;
 }
 
+.feature-big-wall{
+    margin-bottom: 100px;
+}
+
 /*--------------------------------------contact-adnepal---------------------------------*/
+
+.i-want-in-center{
+    text-align: center;
+}
 .contact-us{
-    display:flex;
+    max-width: 750px;
+    margin: auto;
+    display: flex;
     flex-direction: column;
+}
+
+.contact-us-h1{
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.contact-us-p{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#i-am-first-p, #i-am-second-p, #i-am-third-p, #i-am-fourth-p{
+    font-size: 16px;
+    margin:10px;
+}
+
+#message{
+    height: 140px;
+    width: 680px;
+}
+
+.i-am-input-area{
+    font-size: 16px;
+    border-radius:4px;
+    border:1px solid rgb(201, 197, 197);
+    width: 335px;
+    height: 45px;
+    
+}
+
+.parentOF-we-are-four-input{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.we-are-four-input, .i-am-input-area:hover{
+    border-color: #c31717;
 }
