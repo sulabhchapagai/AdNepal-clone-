@@ -12,7 +12,7 @@
 
 .i-am-background {
     background-image: url(/images/background/header_background.jpeg);
-    height: 70vmax;
+    height: 100%;
     width: 100%;
     display: flow-root;
     background-size: cover;
@@ -63,7 +63,7 @@
     color: var(--color);
 }
 
-.options:hover{
+.options:hover {
     color: red;
     border-bottom: 2px solid rgb(211, 5, 5);
 }
@@ -111,13 +111,14 @@
 .video-content {
     border: 3px solid rgb(172, 172, 172);
     margin-bottom: 100px;
-    height: 350px;
+    height: 35vw;
+    width: 60vw;
 }
 
 /* <----------------------------------------------------i-am-middle----------------------------------------->*/
 .i-am-middle-background {
     background: url(/images/background/how_it_work_background.jpeg);
-    height: 2200px;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -198,9 +199,14 @@
 
 .article {
     text-align: left;
-    font-size: 17px;
+    font-size: 1.2vw;
     font-weight: 300;
     line-height: 30px;
+}
+
+.article p {
+    line-height: 25px;
+    margin: 20px;
 }
 
 .no-background {
@@ -224,6 +230,7 @@
 
 .left-right {
     display: flex;
+    justify-content: center;
     max-width: 1000px;
     margin: auto;
     margin-top: 100px;
@@ -298,8 +305,8 @@
 }
 
 .i-am-content-image-right {
-    height: 700px;
-    width: 500px;
+    height: 45vw;
+    width: 35vw;
     margin-left: 50px;
     margin-bottom: 70px;
 }
@@ -447,17 +454,12 @@
     margin: 10px;
 }
 
-#message {
-    height: 140px;
-    width: 680px;
-}
-
 .i-am-input-area {
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid rgb(201, 197, 197);
-    width: 40%;
-    height: 10%;
+    width: 325px;
+    height: 40px;
     transition: all 0.3s ease-in;
 
 }
@@ -474,7 +476,7 @@
 
 .i-am-hr {
     border: solid 1px rgb(189, 189, 189);
-    opacity: 0.2;
+    opacity:0.2;
 }
 
 .i-am-footer-background {
@@ -487,7 +489,7 @@
 
 .i-am-footer {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     justify-content: space-between;
     max-width: 1100px;
     margin: auto;
@@ -539,27 +541,145 @@
     flex-direction: row;
 }
 
-@media(max-width:900px){
-    .left-right{
+@media(max-width:900px) {
+    .left-right {
         display: flex;
         flex-direction: column;
         align-content: center;
     }
 
-    .hero-right-text{
-        margin-top:400px;
+    .hero-right-text {
+        margin-top: 400px;
     }
 
-    .hero-hero3{
-        left:25%;
-    }
-    
     .laptop-screen-and-hand,
     .i-am-content-left,
-    .left-content-right-image{
+    .left-content-right-image {
         flex-direction: column;
         justify-content: center;
         align-content: center;
     }
 
+    .i-am-content-image-right {
+        height: 95vw;
+        width: 85vw;
+        /* margin-left: 70px; */
+        margin-bottom: 70px;
+        justify-items: center;
+    }
+
+    .hero-hero3 {
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .first {
+        font-size: 1rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    .second {
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 30px;
+         margin-bottom: 20px;
+    }
+
+    .third {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
+    /* .video-content{
+        width:100%;
+        height:80%;
+    } */
+
+    .why-three-image {
+        margin-right: 0px;
+        height: 90vw;
+        width: 90vw;
+    }
+
+    .bottom {
+        height: 70vw;
+        width: 90vw;
+    }
+
+    .top {
+        height: 40vw;
+        width: 70vw;
+        margin-right: 100px;
+    }
+
+    .laptop-screen-and-hand-left {
+        margin-left: 25px;
+    }
+
+    .i-am-content-image-right {
+        margin-left: 30px;
+        height: 100vw;
+        width: 80vw;
+    }
+
+    .video-content {
+        height: 50vw;
+        width: 80vw;
+    }
+
+    .i-am-footer{
+     display: flex;
+     flex-direction:column; 
+    }
+
+    .i-am-first-footer{
+    margin-left: 30%;
+    }
+
+    .i-am-second-footer{
+    text-align: center;
+    }
+
+    .i-am-footer-last-parent {
+    margin-top: 100px;
+
+}
+
+.i-am-third-footer{
+    margin-left: 40%;
+}
+
+.i-am-footer-background{
+    width: 100%;
+    height: 400px;
+}
+.parentOF-we-are-four-input{
+   margin-left: 40px;
+}
+
+.i-am-input-area{
+    font-size: 16px;
+}
+
+.contact-us-h1{
+    font-size:2rem ;
+     font-weight: 400;
+}
+.contact-us-p{
+    font-size:1.3rem ;
+    font-weight: 300;
+}
+
+#book-a-demo{
+    width: 40%;
+    margin-left: 30%;
+}
 }
