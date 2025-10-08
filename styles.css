@@ -36,12 +36,17 @@
     z-index: 9999;
     /* always above other content */
     transition: background 0.1s ease;
-    height: 80px;
+    height: 65px;
 }
 
 #nav.scrolled {
     background-color: #FFFFFF;
     box-shadow: 0 4px 10px rgba(14, 14, 14, 0.3);
+}
+
+#logo {
+    height: 50px;
+
 }
 
 .menu-option {
@@ -51,8 +56,9 @@
 
 .items {
     width: 18%;
+    height: 50px;
     display: flex;
-    padding-top: 8px;
+    padding-top: 6px;
     justify-content: space-between;
     font-size: 14px;
 }
@@ -61,11 +67,15 @@
 .options {
     text-decoration: none;
     color: var(--color);
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    
+
 }
 
 .options:hover {
-    color: red;
-    border-bottom: 2px solid rgb(211, 5, 5);
+    border-bottom: 2px solid #DC143C;
 }
 
 .hero {
@@ -476,7 +486,7 @@
 
 .i-am-hr {
     border: solid 1px rgb(189, 189, 189);
-    opacity:0.2;
+    opacity: 0.2;
 }
 
 .i-am-footer-background {
@@ -489,7 +499,7 @@
 
 .i-am-footer {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 1100px;
     margin: auto;
@@ -589,7 +599,7 @@
         font-size: 2rem;
         font-weight: 300;
         line-height: 30px;
-         margin-bottom: 20px;
+        margin-bottom: 20px;
     }
 
     .third {
@@ -635,51 +645,53 @@
         width: 80vw;
     }
 
-    .i-am-footer{
-     display: flex;
-     flex-direction:column; 
+    .i-am-footer {
+        display: flex;
+        flex-direction: column;
     }
 
-    .i-am-first-footer{
-    margin-left: 30%;
+    .i-am-first-footer {
+        margin-left: 30%;
     }
 
-    .i-am-second-footer{
-    text-align: center;
+    .i-am-second-footer {
+        text-align: center;
     }
 
     .i-am-footer-last-parent {
-    margin-top: 100px;
+        margin-top: 100px;
 
-}
+    }
 
-.i-am-third-footer{
-    margin-left: 40%;
-}
+    .i-am-third-footer {
+        margin-left: 40%;
+    }
 
-.i-am-footer-background{
-    width: 100%;
-    height: 400px;
-}
-.parentOF-we-are-four-input{
-   margin-left: 40px;
-}
+    .i-am-footer-background {
+        width: 100%;
+        height: 400px;
+    }
 
-.i-am-input-area{
-    font-size: 16px;
-}
+    .parentOF-we-are-four-input {
+        margin-left: 40px;
+    }
 
-.contact-us-h1{
-    font-size:2rem ;
-     font-weight: 400;
-}
-.contact-us-p{
-    font-size:1.3rem ;
-    font-weight: 300;
-}
+    .i-am-input-area {
+        font-size: 16px;
+    }
 
-#book-a-demo{
-    width: 40%;
-    margin-left: 30%;
-}
+    .contact-us-h1 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .contact-us-p {
+        font-size: 1.3rem;
+        font-weight: 300;
+    }
+
+    #book-a-demo {
+        width: 40%;
+        margin-left: 30%;
+    }
 }
