@@ -1,11 +1,11 @@
-
-
 <body>
   <div class="i-am-background">
+    <!-- ===================== NAVBAR ===================== -->
     <section id="nav">
       <div class="logo">
-        <img src="/images/logo.png" id="logo">
+        <img src="/images/logo.png" id="logo" alt="AdNepal Logo">
       </div>
+
       <div class="items">
         <a href="#" class="options">Home</a>
         <a href="#" class="options">Contact</a>
@@ -13,8 +13,9 @@
 
         <!-- Dropdown Wrapper -->
         <div class="dropdown" id="dropdown-wrapper">
-          <span class="dropdown-toggle" id="menu-toggle"><a href="#" class="options"><i
-                class="fa-solid fa-ellipsis"></i></span>
+          <span class="dropdown-toggle" id="menu-toggle">
+            <a href="#" class="options"><i class="fa-solid fa-ellipsis"></i></a>
+          </span>
 
           <!-- Dropdown Menu -->
           <div class="dropdown-menu" id="dropdown-menu">
@@ -22,10 +23,8 @@
             <a href="#" class="dropdown-button">Book a Demo</a>
           </div>
         </div>
-
-        </i></a>
       </div>
-      <!---------------------------extra---------------------------------------------->
+
       <!-- Hamburger Icon (visible on mobile only) -->
       <div class="hamburger" id="open-nav">
         <i class="fas fa-bars"></i>
@@ -45,18 +44,17 @@
           <li><a href="#" class="cta-button">Book a Demo</a></li>
         </ul>
       </div>
-
-      <!---------------------------ends extra---------------------------------------------->
-
     </section>
-    <!--------------------------------------------Hero starts------------------------------------------------->
+
+    <!-- ===================== HERO SECTION ===================== -->
     <section class="hero">
       <div class="first">Maximize Ad Revenue with AI</div>
       <div class="second">
         <p>Build, manage and deliver ads on</p>
-        <p>very platform with AdNepal.</p>
+        <p>every platform with AdNepal.</p>
       </div>
-      <div class="third">AdNepal offers tailored ad campaigns and performance dashboards to boost your brand impact.
+      <div class="third">
+        AdNepal offers tailored ad campaigns and performance dashboards to boost your brand impact.
         Whether you are a business looking to promote your offerings or an advertiser seeking to captivate your
         audience, AdNepal has you covered. Join us for data-driven success in online advertising.
       </div>
@@ -71,61 +69,66 @@
       </div>
     </section>
   </div>
-  </div>
-  <!----------------------------------------------------hero ends------------------------------------------------>
+
+  <!-- ===================== HOW IT WORKS SECTION ===================== -->
   <div class="i-am-middle-background">
     <section class="medium">
       <div class="child-one">How it Works</div>
       <div class="child-two">Meet AdNepal's all-in-one solution for efficient advertising</div>
       <div class="child-three">A one-stop shop that delivers your ads across all platforms.</div>
+
       <div class="icons-one">
-        <img class="icon-items" src="/images/icons/news_icon.png">
-        <img class="icon-items" src="/images/icons/cart_icon.png">
-        <img class="icon-items" src="/images/icons/wordpress_icon.png">
-      </div>
-      <div class="icons-two">
-        <img class="icon-items" src="/images/icons/mouse_icon.png">
-        <img class="icon-items" src="/images/icons/finger_icon.png">
-      </div>
-      <div class="name">
-        <img class="how_it_work_main_image" src="/images/how_it_work_main_image.png">
+        <img class="icon-items" src="/images/icons/news_icon.png" alt="">
+        <img class="icon-items" src="/images/icons/cart_icon.png" alt="">
+        <img class="icon-items" src="/images/icons/wordpress_icon.png" alt="">
       </div>
 
-      <!------------------------------i-am-three------------------------------------------------------>
+      <div class="icons-two">
+        <img class="icon-items" src="/images/icons/mouse_icon.png" alt="">
+        <img class="icon-items" src="/images/icons/finger_icon.png" alt="">
+      </div>
+
+      <div class="name">
+        <img class="how_it_work_main_image" src="/images/how_it_work_main_image.png" alt="">
+      </div>
+
       <div class="three">
         <div class="three-items-one">
-          <img class="three-items" src="/images/three/merge_audience.png">
+          <img class="three-items" src="/images/three/merge_audience.png" alt="">
           <p class="three-p">Merge Audiences</p>
         </div>
         <div class="three-items-one">
-          <img class="three-items" src="/images/three/save_time.png">
+          <img class="three-items" src="/images/three/save_time.png" alt="">
           <p class="three-p">Save Time</p>
         </div>
         <div class="three-items-one">
-          <img class="three-items" src="/images/three/smart_budget.png">
+          <img class="three-items" src="/images/three/smart_budget.png" alt="">
           <p class="three-p">Smart Budget Allocations</p>
         </div>
       </div>
+
       <div class="article">
         <p>
           At AdNepal, we streamline your advertising efforts with precision and ease. Our system seamlessly merges
           audiences for targeted reach, while our time-saving automation ensures your ads are placed without hassle.
-          Plus,
-          our intelligent budgeting ensures your ad spend is used where it counts, maximizing impact and revenue. It's
-          all
-          about getting the best results with the least effort. AdNepal's platform is designed for publishers to unlock
-          the full potential of their ad spaces with minimal effort.<br>
-          Our AI-driven system analyzes audience interactions and automates ad placements, ensuring your content and ads
-          align for maximum engagement. With our smart budgeting tools, time is saved and revenue is maximized. Simplify
-          your advertising operations and watch your profits grow with AdNepal.</p>
+          Plus, our intelligent budgeting ensures your ad spend is used where it counts, maximizing impact and revenue.
+          It's all about getting the best results with the least effort.
+        </p>
+        <p>
+          AdNepal's platform is designed for publishers to unlock the full potential of their ad spaces with minimal
+          effort. Our AI-driven system analyzes audience interactions and automates ad placements, ensuring your content
+          and ads align for maximum engagement. With our smart budgeting tools, time is saved and revenue is maximized.
+          Simplify your advertising operations and watch your profits grow with AdNepal.
+        </p>
       </div>
+
       <div class="learn-more-button">
         <button class="i-am-button" style="margin-bottom: 100px;">Learn more</button>
       </div>
     </section>
   </div>
 
-  <!-----------------------------------problem section-->
+  <!-- ===================== WHY ADNEPAL ===================== -->
   <section class="no-background">
     <div class="hero-hero">
       <p class="no-background-first">Why AdNepal</p>
@@ -135,168 +138,167 @@
       <h1 class="no-background-second">where it's needed</h1>
     </div>
   </section>
+
   <section class="left-right">
     <div class="hero-hero3">
-      <img class="bottom" src="/images/why_one.jpeg">
-      <img class="top" src="/images/why_one_top.png">
+      <img class="bottom" src="/images/why_one.jpeg" alt="">
+      <img class="top" src="/images/why_one_top.png" alt="">
     </div>
     <div class="hero-right-text">
       <h2 class="right-h2">Easy setup</h2>
       <h3 class="right-h3">Set it up once, and you're good to go. No hassle or code required.</h3>
-      <p class="right-p">Set up once, benefit forever with AdNepal's hassle-free platform. Our one-time, easy
+      <p class="right-p">
+        Set up once, benefit forever with AdNepal's hassle-free platform. Our one-time, easy
         integration lays the foundation for perpetual earnings. Welcome to the future of effortless online monetization.
       </p>
-
       <button class="i-am-button" style="margin-top: 50px; margin-bottom: 100px;">Book a Demo</button>
-
     </div>
   </section>
-  <!----------------------------------maximize Revenue-------------------------------------------->
+
+  <!-- ===================== MAXIMIZE REVENUE ===================== -->
   <section class="left-content-right-image">
     <div class="i-am-content-left">
       <h1 class="left-h1">Maximize Revenue</h1>
-      <h2 class="left-h2">With AdNepal's intelligent AI, you can rest assured your resources are spent wisely.<h2>
-          <div class="i-am-list-items">
-            <img class="i-am-three-images" src="/images/list_item.png">
-            <p class="i-am-small-content">Performance-based Ad placement</p>
-          </div>
-          <div class="i-am-list-items">
-            <img class="i-am-three-images" src="/images/list_item.png">
-            <p class="i-am-small-content"> Dynamic resources allocation</p>
-          </div>
-          <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Book a Demo</button>
+      <h2 class="left-h2">With AdNepal's intelligent AI, you can rest assured your resources are spent wisely.</h2>
+      <div class="i-am-list-items">
+        <img class="i-am-three-images" src="/images/list_item.png" alt="">
+        <p class="i-am-small-content">Performance-based Ad placement</p>
+      </div>
+      <div class="i-am-list-items">
+        <img class="i-am-three-images" src="/images/list_item.png" alt="">
+        <p class="i-am-small-content">Dynamic resource allocation</p>
+      </div>
+      <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Book a Demo</button>
     </div>
     <div class="i-am-content-image-div">
       <img class="i-am-content-image-right" src="/images/why_two.png" alt="">
     </div>
   </section>
+
+  <!-- ===================== AD MANAGEMENT ===================== -->
   <section class="laptop-screen-and-hand">
     <div class="laptop-screen-and-hand-left">
-      <img class="why-three-image" src="/images/why_three.jpeg">
+      <img class="why-three-image" src="/images/why_three.jpeg" alt="">
     </div>
     <div class="laptop-screen-and-hand-right">
       <h1 class="laptop-screen-and-hand-h1">Effortless Ad Management</h1>
-      <p class="laptop-screen-and-hand-p">AdNepal simplifies ad management: automatic, efficient, and precise. Free up
-        your focus for growth, while we handle the optimization and scheduling of your ads. Effortless and effective
-        experience the seamless way to manage and maximize your advertising.</p>
+      <p class="laptop-screen-and-hand-p">
+        AdNepal simplifies ad management: automatic, efficient, and precise. Free up
+        your focus for growth, while we handle the optimization and scheduling of your ads.
+        Effortless and effective — experience the seamless way to manage and maximize your advertising.
+      </p>
+
       <div class="i-am-boss">
         <div class="i-face-paragrapa">
-          <img class="we-are-four" src="/images/list_item.png">
+          <img class="we-are-four" src="/images/list_item.png" alt="">
           <p class="we-are-four-paragraph">Automate with Ease</p>
         </div>
         <div class="i-face-paragrapa">
-          <img class="we-are-four" src="/images/list_item.png">
-          <p class="we-are-four-paragraph">Automate with Ease</p>
-        </div>
-        <div class="i-face-paragrapa">
-          <img class="we-are-four" src="/images/list_item.png">
+          <img class="we-are-four" src="/images/list_item.png" alt="">
           <p class="we-are-four-paragraph">Focus on Growth</p>
         </div>
         <div class="i-face-paragrapa">
-          <img class="we-are-four" src="/images/list_item.png">
+          <img class="we-are-four" src="/images/list_item.png" alt="">
           <p class="we-are-four-paragraph">Maximized Efficiency</p>
         </div>
       </div>
       <button class="i-am-button">Book a Demo</button>
     </div>
   </section>
+
+  <!-- ===================== FEATURES ===================== -->
   <section class="features">
     <div class="inside-features">
       <h1 class="features-top">Features</h1>
       <h2 class="features-second">From API integrations to powerful <br>analytics - AdNepal has it all.</h2>
-      <p class="features-third">analytics - AdNepal has it all.
-        AdNepal offers everything you need: easy API integrations and deep analytics. With us, you get clear <br>
-        insights and
-        simple connections, making your advertising smarter and more effective. It's all about <br> getting great
-        results,
-        easily.</p>
+      <p class="features-third">
+        AdNepal offers everything you need: easy API integrations and deep analytics.
+        With us, you get clear insights and simple connections, making your advertising smarter and more effective.
+      </p>
       <div>
         <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Discover AdNepal's Features</button>
       </div>
     </div>
   </section>
+
   <div class="feature-big-wall">
-    <img class="feature-image" src="/images/feature.png">
+    <img class="feature-image" src="/images/feature.png" alt="">
   </div>
-  <!---------------------------------contact us section---------------------------------------->
+
+  <!-- ===================== CONTACT US ===================== -->
   <section class="contact-us">
     <div class="i-want-in-center">
       <h1 class="contact-us-h1">Contact AdNepal</h1>
       <p class="contact-us-p">Drop us a line with any questions, inquiries or business proposals.</p>
     </div>
+
     <div class="parentOF-we-are-four-input">
       <div class="we-are-four-input">
-        <label id="i-am-first-p">
-          <p id="i-am-first-p">First Name</p>
+        <label for="first-name">
+          <p>First Name</p>
           <input class="i-am-input-area" type="text" name="first-name" id="first-name">
         </label>
       </div>
       <div class="we-are-four-input">
-        <label id="i-am-second-p">
-          <p id="i-am-second-p">Last Name</p>
+        <label for="last-name">
+          <p>Last Name</p>
           <input class="i-am-input-area" type="text" name="last-name" id="last-name">
         </label>
       </div>
       <div class="we-are-four-input">
-        <label id="i-am-second-p">
-          <p id="i-am-third-p">Emain</p>
+        <label for="email">
+          <p>Email</p>
           <input class="i-am-input-area" type="email" name="email" id="email">
         </label>
       </div>
       <div class="we-are-four-input">
-        <label id="i-am-third-p">
-          <p id="i-am-third-p">Phone</p>
+        <label for="phone">
+          <p>Phone</p>
           <input class="i-am-input-area" type="tel" name="phone" id="phone">
         </label>
       </div>
       <div class="we-are-four-input">
-        <label id="i-am-fourth-p">
-          <p id="i-am-fourth-p">Message</p>
-          <textarea class="i-am-input-area" name="message"></textarea>
+        <label for="message">
+          <p>Message</p>
+          <textarea class="i-am-input-area" name="message" id="message"></textarea>
         </label>
       </div>
     </div>
+
     <div class="i-want-in-center">
       <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Submit</button>
     </div>
   </section>
+
   <hr class="i-am-hr">
-  <!---------------------------------------i-am-footer----------------------------------->
-  <div class="i-am-footer-background">
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="i-am-footer-background">
     <section class="i-am-footer">
       <div class="i-am-first-footer">
         <p class="inside-footer-p">AdNepal</p>
       </div>
       <div class="i-am-second-footer">
         <p class="child-footer">Features</p>
-        <p class="child-footer">Resurces</p>
+        <p class="child-footer">Resources</p>
         <p class="child-footer">Contact</p>
-
         <button class="i-am-button" id="book-a-demo" style="margin-top: 20px;">Book a Demo</button>
-
       </div>
       <div class="i-am-third-footer">
         <p class="footer-email">hello@adnepal.com</p>
       </div>
-  </div>
+    </section>
 
+    <hr class="i-am-hr">
 
-  <hr class="i-am-hr">
-  <div class="i-am-footer-last-parent">
-    <div id="left">© 2024 by AdNepal.</div>
-    <div id="right">
-      <div class="i-am-logo"><i class="fa-brands        fa-facebook"></i></div>
-      <div class="i-am-logo"><i class="fa-brands fa-instagram"></i></div>
-      <div class="i-am-logo"><i class="fa-brands fa-square-twitter"></i></div>
+    <div class="i-am-footer-last-parent">
+      <div id="left">© 2024 by AdNepal.</div>
+      <div id="right">
+        <div class="i-am-logo"><i class="fa-brands fa-facebook"></i></div>
+        <div class="i-am-logo"><i class="fa-brands fa-instagram"></i></div>
+        <div class="i-am-logo"><i class="fa-brands fa-square-twitter"></i></div>
+      </div>
     </div>
-  </div>
-
-  </section>
-
-
-
-
-
+  </footer>
 </body>
-
 </html>
