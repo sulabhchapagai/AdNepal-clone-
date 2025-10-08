@@ -10,20 +10,236 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <styles>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--color);
+    font-family: -apple-system, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.i-am-background {
+    background-image: url(/images/background/header_background.jpeg);
+    height: 100%;
+    width: 100%;
+    display: flow-root;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: transparent;
+    align-items: center;
+    /* will change on scroll */
+    position: fixed;
+    /* stays always on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    /* always above other content */
+    transition: background 0.1s ease;
+    height: 65px;
+}
+
+#nav.scrolled {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(14, 14, 14, 0.3);
+}
+
+#logo {
+    height: 50px;
+
+}
+
+.menu-option {
+    display: none;
+}
+
+
+.items {
+    width: 18%;
+    height: 64px;
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+
+.options {
+    text-decoration: none;
+    color: var(--color);
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+
+}
+
+.options:hover {
+    border-bottom: 2px solid #DC143C;
+}
+
+.items-responsive {
+    display: none;
+}
+
+@media(max-width:600px) {
+    .items {
+        display: none;
+    }
+
+    .menu-option {
+        display: block;
+    }
+
+
+
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    max-width: 792px;
+    margin: auto;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.first {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.second {
+    font-size: 55px;
+    font-weight: 200;
+}
+
+.third {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.i-am-button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #c31717;
+    color: bisque;
+    border: 1px solid #c31717;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease-in;
+}
+
+.i-am-button:hover {
+    background-color: #8a0909;
+}
+
+.video-content {
+    border: 3px solid rgb(172, 172, 172);
+    margin-bottom: 100px;
+    height: 35vw;
+    width: 60vw;
+}
+
+/* <----------------------------------------------------i-am-middle----------------------------------------->*/
+.i-am-middle-background {
+    background: url(/images/background/how_it_work_background.jpeg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.medium {
+    max-width: 1024px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 0;
+}
+
+.child-one {
+    margin-top: 15%;
+    ;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.child-two {
+    font-size: 55px;
+    font-weight: 300;
+}
+
+.child-three {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+    </styles>
 </head>
 
 <body>
   <div class="i-am-background">
     <section id="nav">
       <div class="logo">
-        <img src="/images/logo.png" height="50px">
+        <img src="/images/logo.png" id="logo">
       </div>
       <div class="items">
         <a href="#" class="options">Home</a>
         <a href="#" class="options">Contact</a>
         <a href="#" class="options">Login</a>
-        <a href="#" class="options"><i class="fa-solid fa-ellipsis"></i></a>
+
+        <!-- Dropdown Wrapper -->
+        <div class="dropdown" id="dropdown-wrapper">
+          <span class="dropdown-toggle" id="menu-toggle"><a href="#" class="options"><i
+                class="fa-solid fa-ellipsis"></i></span>
+
+          <!-- Dropdown Menu -->
+          <div class="dropdown-menu" id="dropdown-menu">
+            <a href="#" class="dropdown-item">Sign Up</a>
+            <a href="#" class="dropdown-button">Book a Demo</a>
+          </div>
+        </div>
+
+        </i></a>
       </div>
+      <!---------------------------extra---------------------------------------------->
+      <!-- Hamburger Icon (visible on mobile only) -->
+      <div class="hamburger" id="open-nav">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Sidebar Navigation -->
+      <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-header">
+          <span class="brand">AdNepal</span>
+          <i class="fas fa-times close-btn" id="close-nav"></i>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#" class="cta-button">Book a Demo</a></li>
+        </ul>
+      </div>
+
+      <!---------------------------ends extra---------------------------------------------->
+
     </section>
     <!--------------------------------------------Hero starts------------------------------------------------->
     <section class="hero">
@@ -40,12 +256,239 @@
         <button class="i-am-button">Learn more</button>
       </div>
       <div class="video">
-        <iframe class="video-content" width="786" height="442"
-          src="https://www.youtube.com/embed/wsAiM1BmCB0?si=QWiiizn03onwQjVl" title="YouTube video player"
-          frameborder="0"
+        <iframe class="video-content" src="https://www.youtube.com/embed/wsAiM1BmCB0?si=QWiiizn03onwQjVl"
+          title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
   </div>
   </div>
+  <!----------------------------------------------------hero ends------------------------------------------------>
+  <div class="i-am-middle-background">
+    <section class="medium">
+      <div class="child-one">How it Works</div>
+      <div class="child-two">Meet AdNepal's all-in-one solution for efficient advertising</div>
+      <div class="child-three">A one-stop shop that delivers your ads across all platforms.</div>
+      <div class="icons-one">
+        <img class="icon-items" src="/images/icons/news_icon.png">
+        <img class="icon-items" src="/images/icons/cart_icon.png">
+        <img class="icon-items" src="/images/icons/wordpress_icon.png">
+      </div>
+      <div class="icons-two">
+        <img class="icon-items" src="/images/icons/mouse_icon.png">
+        <img class="icon-items" src="/images/icons/finger_icon.png">
+      </div>
+      <div class="name">
+        <img class="how_it_work_main_image" src="/images/how_it_work_main_image.png">
+      </div>
+
+      <!------------------------------i-am-three------------------------------------------------------>
+      <div class="three">
+        <div class="three-items-one">
+          <img class="three-items" src="/images/three/merge_audience.png">
+          <p class="three-p">Merge Audiences</p>
+        </div>
+        <div class="three-items-one">
+          <img class="three-items" src="/images/three/save_time.png">
+          <p class="three-p">Save Time</p>
+        </div>
+        <div class="three-items-one">
+          <img class="three-items" src="/images/three/smart_budget.png">
+          <p class="three-p">Smart Budget Allocations</p>
+        </div>
+      </div>
+      <div class="article">
+        <p>
+          At AdNepal, we streamline your advertising efforts with precision and ease. Our system seamlessly merges
+          audiences for targeted reach, while our time-saving automation ensures your ads are placed without hassle.
+          Plus,
+          our intelligent budgeting ensures your ad spend is used where it counts, maximizing impact and revenue. It's
+          all
+          about getting the best results with the least effort. AdNepal's platform is designed for publishers to unlock
+          the full potential of their ad spaces with minimal effort.<br>
+          Our AI-driven system analyzes audience interactions and automates ad placements, ensuring your content and ads
+          align for maximum engagement. With our smart budgeting tools, time is saved and revenue is maximized. Simplify
+          your advertising operations and watch your profits grow with AdNepal.</p>
+      </div>
+      <div class="learn-more-button">
+        <button class="i-am-button" style="margin-bottom: 100px;">Learn more</button>
+      </div>
+    </section>
+  </div>
+
+  <!-----------------------------------problem section-->
+  <section class="no-background">
+    <div class="hero-hero">
+      <p class="no-background-first">Why AdNepal</p>
+    </div>
+    <div class="hero-hero2">
+      <h1 class="no-background-second">Put AdNepal to work. Invest your time</h1>
+      <h1 class="no-background-second">where it's needed</h1>
+    </div>
+  </section>
+  <section class="left-right">
+    <div class="hero-hero3">
+      <img class="bottom" src="/images/why_one.jpeg">
+      <img class="top" src="/images/why_one_top.png">
+    </div>
+    <div class="hero-right-text">
+      <h2 class="right-h2">Easy setup</h2>
+      <h3 class="right-h3">Set it up once, and you're good to go. No hassle or code required.</h3>
+      <p class="right-p">Set up once, benefit forever with AdNepal's hassle-free platform. Our one-time, easy
+        integration lays the foundation for perpetual earnings. Welcome to the future of effortless online monetization.
+      </p>
+
+      <button class="i-am-button" style="margin-top: 50px; margin-bottom: 100px;">Book a Demo</button>
+
+    </div>
+  </section>
+  <!----------------------------------maximize Revenue-------------------------------------------->
+  <section class="left-content-right-image">
+    <div class="i-am-content-left">
+      <h1 class="left-h1">Maximize Revenue</h1>
+      <h2 class="left-h2">With AdNepal's intelligent AI, you can rest assured your resources are spent wisely.<h2>
+          <div class="i-am-list-items">
+            <img class="i-am-three-images" src="/images/list_item.png">
+            <p class="i-am-small-content">Performance-based Ad placement</p>
+          </div>
+          <div class="i-am-list-items">
+            <img class="i-am-three-images" src="/images/list_item.png">
+            <p class="i-am-small-content"> Dynamic resources allocation</p>
+          </div>
+          <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Book a Demo</button>
+    </div>
+    <div class="i-am-content-image-div">
+      <img class="i-am-content-image-right" src="/images/why_two.png" alt="">
+    </div>
+  </section>
+  <section class="laptop-screen-and-hand">
+    <div class="laptop-screen-and-hand-left">
+      <img class="why-three-image" src="/images/why_three.jpeg">
+    </div>
+    <div class="laptop-screen-and-hand-right">
+      <h1 class="laptop-screen-and-hand-h1">Effortless Ad Management</h1>
+      <p class="laptop-screen-and-hand-p">AdNepal simplifies ad management: automatic, efficient, and precise. Free up
+        your focus for growth, while we handle the optimization and scheduling of your ads. Effortless and effective
+        experience the seamless way to manage and maximize your advertising.</p>
+      <div class="i-am-boss">
+        <div class="i-face-paragrapa">
+          <img class="we-are-four" src="/images/list_item.png">
+          <p class="we-are-four-paragraph">Automate with Ease</p>
+        </div>
+        <div class="i-face-paragrapa">
+          <img class="we-are-four" src="/images/list_item.png">
+          <p class="we-are-four-paragraph">Automate with Ease</p>
+        </div>
+        <div class="i-face-paragrapa">
+          <img class="we-are-four" src="/images/list_item.png">
+          <p class="we-are-four-paragraph">Focus on Growth</p>
+        </div>
+        <div class="i-face-paragrapa">
+          <img class="we-are-four" src="/images/list_item.png">
+          <p class="we-are-four-paragraph">Maximized Efficiency</p>
+        </div>
+      </div>
+      <button class="i-am-button">Book a Demo</button>
+    </div>
+  </section>
+  <section class="features">
+    <div class="inside-features">
+      <h1 class="features-top">Features</h1>
+      <h2 class="features-second">From API integrations to powerful <br>analytics - AdNepal has it all.</h2>
+      <p class="features-third">analytics - AdNepal has it all.
+        AdNepal offers everything you need: easy API integrations and deep analytics. With us, you get clear <br>
+        insights and
+        simple connections, making your advertising smarter and more effective. It's all about <br> getting great
+        results,
+        easily.</p>
+      <div>
+        <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Discover AdNepal's Features</button>
+      </div>
+    </div>
+  </section>
+  <div class="feature-big-wall">
+    <img class="feature-image" src="/images/feature.png">
+  </div>
+  <!---------------------------------contact us section---------------------------------------->
+  <section class="contact-us">
+    <div class="i-want-in-center">
+      <h1 class="contact-us-h1">Contact AdNepal</h1>
+      <p class="contact-us-p">Drop us a line with any questions, inquiries or business proposals.</p>
+    </div>
+    <div class="parentOF-we-are-four-input">
+      <div class="we-are-four-input">
+        <label id="i-am-first-p">
+          <p id="i-am-first-p">First Name</p>
+          <input class="i-am-input-area" type="text" name="first-name" id="first-name">
+        </label>
+      </div>
+      <div class="we-are-four-input">
+        <label id="i-am-second-p">
+          <p id="i-am-second-p">Last Name</p>
+          <input class="i-am-input-area" type="text" name="last-name" id="last-name">
+        </label>
+      </div>
+      <div class="we-are-four-input">
+        <label id="i-am-second-p">
+          <p id="i-am-third-p">Emain</p>
+          <input class="i-am-input-area" type="email" name="email" id="email">
+        </label>
+      </div>
+      <div class="we-are-four-input">
+        <label id="i-am-third-p">
+          <p id="i-am-third-p">Phone</p>
+          <input class="i-am-input-area" type="tel" name="phone" id="phone">
+        </label>
+      </div>
+      <div class="we-are-four-input">
+        <label id="i-am-fourth-p">
+          <p id="i-am-fourth-p">Message</p>
+          <textarea class="i-am-input-area" name="message"></textarea>
+        </label>
+      </div>
+    </div>
+    <div class="i-want-in-center">
+      <button class="i-am-button" style="margin-top: 35px; margin-bottom: 100px;">Submit</button>
+    </div>
+  </section>
+  <hr class="i-am-hr">
+  <!---------------------------------------i-am-footer----------------------------------->
+  <div class="i-am-footer-background">
+    <section class="i-am-footer">
+      <div class="i-am-first-footer">
+        <p class="inside-footer-p">AdNepal</p>
+      </div>
+      <div class="i-am-second-footer">
+        <p class="child-footer">Features</p>
+        <p class="child-footer">Resurces</p>
+        <p class="child-footer">Contact</p>
+
+        <button class="i-am-button" id="book-a-demo" style="margin-top: 20px;">Book a Demo</button>
+
+      </div>
+      <div class="i-am-third-footer">
+        <p class="footer-email">hello@adnepal.com</p>
+      </div>
+  </div>
+
+
+  <hr class="i-am-hr">
+  <div class="i-am-footer-last-parent">
+    <div id="left">© 2024 by AdNepal.</div>
+    <div id="right">
+      <div class="i-am-logo"><i class="fa-brands        fa-facebook"></i></div>
+      <div class="i-am-logo"><i class="fa-brands fa-instagram"></i></div>
+      <div class="i-am-logo"><i class="fa-brands fa-square-twitter"></i></div>
+    </div>
+  </div>
+
+  </section>
+
+
+
+
+
+</body>
+
+</html>
