@@ -27,6 +27,7 @@
     justify-content: space-between;
     padding: 15px 30px;
     background-color: transparent;
+    align-items: center;
     /* will change on scroll */
     position: fixed;
     /* stays always on top */
@@ -56,9 +57,9 @@
 
 .items {
     width: 18%;
-    height: 50px;
+    height: 64px;
     display: flex;
-    padding-top: 6px;
+    padding-top: 20px;
     justify-content: space-between;
     font-size: 14px;
 }
