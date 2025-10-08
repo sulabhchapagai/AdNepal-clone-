@@ -717,6 +717,70 @@
 
 /*----------------------- ai used----------------------------- */
 /* Responsive Nav: hidden by default */
+
+/* Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Toggle icon (3 dots) */
+.dropdown-toggle {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #00aaff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    min-width: 160px;
+    z-index: 1000;
+}
+
+/* Show menu (class toggled by JS or hover) */
+.dropdown.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown items */
+.dropdown-item {
+    display: block;
+    padding: 8px 12px;
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* CTA Button */
+.dropdown-button {
+    display: block;
+    background-color: #c82333;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-button:hover {
+    background-color: #a71d2a;
+}
+
+
 #responsive-nav {
     position: fixed;
     top: 0;
@@ -841,4 +905,15 @@
     .main-nav {
         display: none;
     }
+
+    /* By default show hamburger */
+    #open-nav {
+        display: block;
+    }
+
+    /* When sidebar is active, hide hamburger */
+    .mobile-nav.active~#open-nav {
+        display: none;
+    }
+
 }

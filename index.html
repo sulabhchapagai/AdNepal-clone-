@@ -23,28 +23,41 @@
         <a href="#" class="options">Home</a>
         <a href="#" class="options">Contact</a>
         <a href="#" class="options">Login</a>
-        <a href="#" class="options"><i class="fa-solid fa-ellipsis"></i></a>
-      </div>
-          <!---------------------------extra---------------------------------------------->
-      <!-- Hamburger Icon (visible on mobile only) -->
-<div class="hamburger" id="open-nav">
-  <i class="fas fa-bars"></i>
-</div>
 
-<!-- Sidebar Navigation -->
-<div id="mobile-nav" class="mobile-nav">
-  <div class="mobile-nav-header">
-    <span class="brand">AdNepal</span>
-    <i class="fas fa-times close-btn" id="close-nav"></i>
-  </div>
-  <ul class="mobile-nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Sign Up</a></li>
-    <li><a href="#" class="cta-button">Book a Demo</a></li>
-  </ul>
-</div>
+        <!-- Dropdown Wrapper -->
+        <div class="dropdown" id="dropdown-wrapper">
+          <span class="dropdown-toggle" id="menu-toggle"><a href="#" class="options"><i
+                class="fa-solid fa-ellipsis"></i></span>
+
+          <!-- Dropdown Menu -->
+          <div class="dropdown-menu" id="dropdown-menu">
+            <a href="#" class="dropdown-item">Sign Up</a>
+            <a href="#" class="dropdown-button">Book a Demo</a>
+          </div>
+        </div>
+
+        </i></a>
+      </div>
+      <!---------------------------extra---------------------------------------------->
+      <!-- Hamburger Icon (visible on mobile only) -->
+      <div class="hamburger" id="open-nav">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Sidebar Navigation -->
+      <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav-header">
+          <span class="brand">AdNepal</span>
+          <i class="fas fa-times close-btn" id="close-nav"></i>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#" class="cta-button">Book a Demo</a></li>
+        </ul>
+      </div>
 
       <!---------------------------ends extra---------------------------------------------->
 
@@ -294,52 +307,87 @@
   </section>
 
   <script>
-  // Scroll effect on navbar
-  const navbar = document.getElementById("nav");
+    // Scroll effect on navbar
+    const navbar = document.getElementById("nav");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
 
-  // Responsive nav open/close
-  const menuToggle = document.getElementById("menu-toggle");
-  const menuClose = document.getElementById("menu-close");
-  const responsiveNav = document.getElementById("responsive-nav");
-  const overlay = document.getElementById("nav-overlay");
+    // Responsive nav open/close
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const responsiveNav = document.getElementById("responsive-nav");
+    const overlay = document.getElementById("nav-overlay");
 
-  menuToggle.addEventListener("click", () => {
-    responsiveNav.classList.add("active");
-    overlay.classList.add("active");
-  });
+    menuToggle.addEventListener("click", () => {
+      responsiveNav.classList.add("active");
+      overlay.classList.add("active");
+    });
 
-  menuClose.addEventListener("click", () => {
-    responsiveNav.classList.remove("active");
-    overlay.classList.remove("active");
-  });
+    menuClose.addEventListener("click", () => {
+      responsiveNav.classList.remove("active");
+      overlay.classList.remove("active");
+    });
 
-  overlay.addEventListener("click", () => {
-    responsiveNav.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-</script>
+    overlay.addEventListener("click", () => {
+      responsiveNav.classList.remove("active");
+      overlay.classList.remove("active");
+    });
+  </script>
 
-<script>
-  const openNav = document.getElementById("open-nav");
-  const closeNav = document.getElementById("close-nav");
-  const mobileNav = document.getElementById("mobile-nav");
+  <script>
+    const openNav = document.getElementById("open-nav");
+    const closeNav = document.getElementById("close-nav");
+    const mobileNav = document.getElementById("mobile-nav");
 
-  openNav.addEventListener("click", () => {
-    mobileNav.classList.add("active");
-  });
+    openNav.addEventListener("click", () => {
+      mobileNav.classList.add("active");
+      openNav.style.display = "none"; // hide hamburger icon
+    });
 
-  closeNav.addEventListener("click", () => {
-    mobileNav.classList.remove("active");
-  });
-</script>
+    closeNav.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+      openNav.style.display = "block"; // show hamburger icon
+    });
+  </script>
+
+  <script>
+    const wrapper = document.getElementById("dropdown-wrapper");
+    const toggle = document.getElementById("menu-toggle");
+
+    let isManuallyToggled = false;
+
+    // Click to toggle
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      isManuallyToggled = !wrapper.classList.contains("show");
+      wrapper.classList.toggle("show");
+    });
+
+    // Hover to show
+    wrapper.addEventListener("mouseenter", () => {
+      wrapper.classList.add("show");
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+      if (!isManuallyToggled) {
+        wrapper.classList.remove("show");
+      }
+    });
+
+    // Click outside to close
+    document.addEventListener("click", (e) => {
+      if (!wrapper.contains(e.target)) {
+        wrapper.classList.remove("show");
+        isManuallyToggled = false;
+      }
+    });
+  </script>
 
 
 
