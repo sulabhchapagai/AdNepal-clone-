@@ -71,12 +71,29 @@
     height: 100%;
     cursor: pointer;
     transition: all 0.2s ease-in;
-    
+
 
 }
 
 .options:hover {
     border-bottom: 2px solid #DC143C;
+}
+
+.items-responsive {
+    display: none;
+}
+
+@media(max-width:600px) {
+    .items {
+        display: none;
+    }
+
+    .menu-option {
+        display: block;
+    }
+
+
+
 }
 
 .hero {
@@ -694,5 +711,134 @@
     #book-a-demo {
         width: 40%;
         margin-left: 30%;
+    }
+}
+
+
+/*----------------------- ai used----------------------------- */
+/* Responsive Nav: hidden by default */
+#responsive-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* hidden off-screen */
+    height: 100vh;
+    width: 250px;
+    background-color: #fff;
+    z-index: 9999;
+    /* sits on top of everything */
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Show sidebar */
+#responsive-nav.active {
+    right: 0;
+}
+
+/* Close button styling (optional) */
+#menu-close {
+    align-self: flex-end;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #000;
+}
+
+
+/* Hamburger icon (top-left on mobile) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+/* Sidebar nav */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* hidden by default */
+    width: 280px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Show sidebar when active */
+.mobile-nav.active {
+    right: 0;
+}
+
+/* Sidebar header */
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mobile-nav .brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.close-btn {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Navigation links */
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-links li {
+    margin-bottom: 15px;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}
+
+/* CTA button */
+.cta-button {
+    background-color: #ba1a1a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        right: 20px;
+        left: auto;
+    }
+
+    /* Optional: hide main nav on small screens */
+    .main-nav {
+        display: none;
     }
 }

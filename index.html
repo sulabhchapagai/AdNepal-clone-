@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
+
 </head>
 
 <body>
@@ -25,7 +25,29 @@
         <a href="#" class="options">Login</a>
         <a href="#" class="options"><i class="fa-solid fa-ellipsis"></i></a>
       </div>
-      <div class="menu-option"><i class="fa-solid fa-bars"></i></div>
+          <!---------------------------extra---------------------------------------------->
+      <!-- Hamburger Icon (visible on mobile only) -->
+<div class="hamburger" id="open-nav">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Sidebar Navigation -->
+<div id="mobile-nav" class="mobile-nav">
+  <div class="mobile-nav-header">
+    <span class="brand">AdNepal</span>
+    <i class="fas fa-times close-btn" id="close-nav"></i>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Sign Up</a></li>
+    <li><a href="#" class="cta-button">Book a Demo</a></li>
+  </ul>
+</div>
+
+      <!---------------------------ends extra---------------------------------------------->
+
     </section>
     <!--------------------------------------------Hero starts------------------------------------------------->
     <section class="hero">
@@ -259,29 +281,67 @@
   </div>
 
 
- <hr class="i-am-hr">
-      <div class="i-am-footer-last-parent">
-        <div id="left">© 2024 by AdNepal.</div>
-        <div id="right">
-          <div class="i-am-logo"><i class="fa-brands        fa-facebook"></i></div>
-          <div class="i-am-logo"><i class="fa-brands fa-instagram"></i></div>
-          <div class="i-am-logo"><i class="fa-brands fa-square-twitter"></i></div>
-        </div>
-      </div>
+  <hr class="i-am-hr">
+  <div class="i-am-footer-last-parent">
+    <div id="left">© 2024 by AdNepal.</div>
+    <div id="right">
+      <div class="i-am-logo"><i class="fa-brands        fa-facebook"></i></div>
+      <div class="i-am-logo"><i class="fa-brands fa-instagram"></i></div>
+      <div class="i-am-logo"><i class="fa-brands fa-square-twitter"></i></div>
+    </div>
+  </div>
 
   </section>
 
   <script>
-    const navbar = document.getElementById("nav");
+  // Scroll effect on navbar
+  const navbar = document.getElementById("nav");
 
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-  </script>
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  // Responsive nav open/close
+  const menuToggle = document.getElementById("menu-toggle");
+  const menuClose = document.getElementById("menu-close");
+  const responsiveNav = document.getElementById("responsive-nav");
+  const overlay = document.getElementById("nav-overlay");
+
+  menuToggle.addEventListener("click", () => {
+    responsiveNav.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  menuClose.addEventListener("click", () => {
+    responsiveNav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    responsiveNav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+</script>
+
+<script>
+  const openNav = document.getElementById("open-nav");
+  const closeNav = document.getElementById("close-nav");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  openNav.addEventListener("click", () => {
+    mobileNav.classList.add("active");
+  });
+
+  closeNav.addEventListener("click", () => {
+    mobileNav.classList.remove("active");
+  });
+</script>
+
+
 
 
 
